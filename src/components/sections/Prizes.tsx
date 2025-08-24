@@ -56,7 +56,7 @@ export const Prizes = () => {
           <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-6">
             Prizes & <span className="text-gradient">Opportunities</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
             Compete for amazing rewards and life-changing opportunities
           </p>
         </div>
@@ -70,37 +70,40 @@ export const Prizes = () => {
               <div key={prize.rank} className="group">
                 <div className={`
                   glass-card p-8 rounded-2xl h-full transition-all duration-500 
-                  group-hover:scale-105 ${prize.glow} hover:shadow-2xl
-                  ${index === 0 ? 'md:scale-110 relative z-10' : ''}
+                  group-hover:scale-105 hover:shadow-2xl border border-border/50
+                  ${prize.glow}
                 `}>
                   {index === 0 && (
-                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-primary px-4 py-2 rounded-full">
-                      <span className="text-sm font-bold text-primary-foreground">WINNER</span>
+                    <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-primary px-4 py-2 rounded-full glow-primary">
+                      <span className="text-sm font-bold text-primary-foreground">MOST POPULAR</span>
                     </div>
                   )}
                   
                   <div className="text-center">
                     <div className={`
                       w-20 h-20 rounded-full mx-auto mb-6 flex items-center justify-center
-                      bg-gradient-to-br ${prize.gradient} group-hover:animate-glow
+                      bg-gradient-to-br ${prize.gradient} shadow-lg
                     `}>
                       <IconComponent className="w-10 h-10 text-white" />
                     </div>
                     
-                    <h3 className="font-orbitron font-bold text-2xl mb-2">
+                    <h3 className="font-orbitron font-bold text-2xl mb-2 text-foreground">
                       {prize.title}
                     </h3>
-                    <p className="text-muted-foreground mb-4">{prize.rank}</p>
+                    <p className="text-muted-foreground mb-4 font-medium">{prize.rank}</p>
                     
-                    <div className="text-4xl font-black mb-6 bg-gradient-to-r ${prize.gradient} bg-clip-text text-transparent">
+                    <div className={`
+                      text-4xl font-black mb-6 bg-gradient-to-r ${prize.gradient} 
+                      bg-clip-text text-transparent
+                    `}>
                       {prize.amount}
                     </div>
                     
                     <div className="space-y-3">
                       {prize.perks.map((perk) => (
                         <div key={perk} className="flex items-center justify-center gap-2">
-                          <div className="w-2 h-2 rounded-full bg-current opacity-60" />
-                          <span className="text-sm text-muted-foreground">{perk}</span>
+                          <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${prize.gradient}`} />
+                          <span className="text-sm text-foreground/80">{perk}</span>
                         </div>
                       ))}
                     </div>

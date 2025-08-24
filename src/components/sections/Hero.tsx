@@ -39,11 +39,11 @@ export const Hero = () => {
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-            Innovation in <span className="text-primary font-semibold">AI</span>, 
-            <span className="text-accent font-semibold"> Cloud</span>, 
-            <span className="text-accent-purple font-semibold"> GPU</span>, and 
-            <span className="text-primary-glow font-semibold"> next-gen computing</span>
+          <p className="text-xl md:text-2xl text-foreground/90 mb-12 max-w-3xl mx-auto leading-relaxed font-medium">
+            Innovation in <span className="text-primary font-bold">AI</span>, 
+            <span className="text-accent font-bold"> Cloud</span>, 
+            <span className="text-accent-purple font-bold"> GPU</span>, and 
+            <span className="text-primary-glow font-bold"> next-gen computing</span>
           </p>
 
           {/* CTA Buttons */}
@@ -59,17 +59,17 @@ export const Hero = () => {
 
           {/* Stats */}
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto">
-            <div className="glass-card p-6 rounded-xl">
+            <div className="glass-card p-6 rounded-xl border border-border/30 hover:shadow-glow-primary/30 transition-all duration-300">
               <div className="text-3xl font-bold text-primary mb-2">$50K+</div>
-              <div className="text-muted-foreground">Total Prizes</div>
+              <div className="text-foreground/70 font-medium">Total Prizes</div>
             </div>
-            <div className="glass-card p-6 rounded-xl">
+            <div className="glass-card p-6 rounded-xl border border-border/30 hover:shadow-glow-accent/30 transition-all duration-300">
               <div className="text-3xl font-bold text-accent mb-2">72H</div>
-              <div className="text-muted-foreground">Non-stop Coding</div>
+              <div className="text-foreground/70 font-medium">Non-stop Coding</div>
             </div>
-            <div className="glass-card p-6 rounded-xl">
+            <div className="glass-card p-6 rounded-xl border border-border/30 hover:shadow-glow-purple/30 transition-all duration-300">
               <div className="text-3xl font-bold text-accent-purple mb-2">500+</div>
-              <div className="text-muted-foreground">Participants</div>
+              <div className="text-foreground/70 font-medium">Participants</div>
             </div>
           </div>
         </div>

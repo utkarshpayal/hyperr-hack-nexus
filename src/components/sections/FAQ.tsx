@@ -48,7 +48,7 @@ export const FAQ = () => {
           <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-6">
             Frequently Asked <span className="text-gradient">Questions</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
             Got questions? We've got answers to help you prepare for the hackathon
           </p>
         </div>

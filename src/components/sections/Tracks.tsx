@@ -64,7 +64,7 @@ export const Tracks = () => {
           <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-6">
             Challenge <span className="text-gradient">Tracks</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto">
             Choose your battlefield and tackle cutting-edge problems across multiple domains
           </p>
         </div>
@@ -92,7 +92,7 @@ export const Tracks = () => {
                     </h3>
                   </div>
                   
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-foreground/70 mb-6 leading-relaxed">
                     {track.description}
                   </p>
                   

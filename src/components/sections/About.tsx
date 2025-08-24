@@ -33,7 +33,7 @@ export const About = () => {
           <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-6">
             About the <span className="text-gradient">Hackathon</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-foreground/80 max-w-3xl mx-auto leading-relaxed">
             Join the most innovative hackathon of 2025, where brilliant minds converge to solve 
             tomorrow's computing challenges. Experience 72 hours of pure innovation, collaboration, 
             and technological breakthrough.
@@ -52,7 +52,7 @@ export const About = () => {
                   <h3 className="font-orbitron font-bold text-xl mb-4 text-center">
                     {feature.title}
                   </h3>
-                  <p className="text-muted-foreground text-center leading-relaxed">
+                  <p className="text-foreground/70 text-center leading-relaxed">
                     {feature.description}
                   </p>
                 </div>
@@ -66,7 +66,7 @@ export const About = () => {
             <h3 className="font-orbitron font-bold text-2xl mb-4 text-gradient">
               Why Hyperrcompute?
             </h3>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <p className="text-lg text-foreground/80 leading-relaxed">
               Hyperrcompute is at the forefront of computational innovation, providing the infrastructure 
               and tools that power tomorrow's applications. Our hackathon brings together the brightest 
               minds to explore the possibilities of advanced computing, from AI acceleration to quantum 

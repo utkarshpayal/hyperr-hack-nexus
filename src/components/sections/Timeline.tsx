@@ -46,7 +46,7 @@ export const Timeline = () => {
           <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-6">
             Hackathon <span className="text-gradient">Timeline</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/80 max-w-2xl mx-auto">
             Follow the journey from registration to victory
           </p>
         </div>

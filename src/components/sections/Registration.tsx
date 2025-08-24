@@ -9,7 +9,7 @@ export const Registration = () => {
           <h2 className="font-orbitron font-bold text-4xl md:text-5xl mb-6">
             Ready to <span className="text-gradient">Innovate?</span>
           </h2>
-          <p className="text-xl text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-xl text-foreground/80 mb-12 max-w-2xl mx-auto">
             Join hundreds of brilliant minds in building the future of computing. 
             Registration closes March 10th - secure your spot now!
           </p>
