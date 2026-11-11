@@ -1,73 +1,56 @@
-# Welcome to your Lovable project
+# Hyperrcompute Hackathon 2025 – Landing Page
 
-## Project info
+A single-page marketing site for the **Hyperrcompute Hackathon 2025**, an event focused on AI, cloud computing, GPU optimization and next-gen computing. The page presents the event details, schedule, tracks, prizes and FAQ with a dark, glowing visual style.
 
-**URL**: https://lovable.dev/projects/bd88e048-bd88-4ada-a656-c5a4fc25cc3c
+> **Status:** static front end. All event details (dates, prizes, stats, registration counts) are hard-coded in the section components, and the "Register" call-to-action buttons are not yet wired to a registration flow or backend.
 
-## How can I edit this code?
+## Page sections
 
-There are several ways of editing your application.
+The home page (`src/pages/Index.tsx`) is composed of these sections, in order:
 
-**Use Lovable**
+| Section | Component | Content |
+| --- | --- | --- |
+| Navbar | `components/layout/Navbar.tsx` | Anchor links to About, Timeline, Tracks, Prizes, FAQ |
+| Hero | `components/sections/Hero.tsx` | Event title, dates, headline stats and CTAs |
+| About | `components/sections/About.tsx` | Focus areas: AI, cloud computing, GPU optimization, next-gen computing |
+| Timeline | `components/sections/Timeline.tsx` | Registration → idea submission → hacking → demos → winners |
+| Tracks | `components/sections/Tracks.tsx` | AI & ML, Cloud Computing, GPU Optimization, DevOps & Security |
+| Prizes | `components/sections/Prizes.tsx` | Prize tiers and additional perks |
+| FAQ | `components/sections/FAQ.tsx` | Accordion of common participant questions |
+| Registration | `components/sections/Registration.tsx` | When/where/team size, registration status, what's included |
+| Footer | `components/sections/Footer.tsx` | Quick links and social links |
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/bd88e048-bd88-4ada-a656-c5a4fc25cc3c) and start prompting.
+A scroll-to-top button is also rendered on the page. Any unknown route renders a 404 page.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Tech stack
 
-**Use your preferred IDE**
+- [Vite](https://vitejs.dev/) + React 18 + TypeScript
+- [Tailwind CSS](https://tailwindcss.com/) and [shadcn/ui](https://ui.shadcn.com/) (Radix UI primitives) in `src/components/ui`
+- React Router, TanStack Query provider, lucide-react icons
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Getting started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requirements: Node.js and npm.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+npm install
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The dev server is configured in `vite.config.ts` to listen on port **8080**.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Scripts
 
-**Use GitHub Codespaces**
+| Script | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite dev server |
+| `npm run build` | Production build into `dist/` |
+| `npm run build:dev` | Build using development mode |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run ESLint |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+No test script is configured.
 
-## What technologies are used for this project?
+## Configuration
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/bd88e048-bd88-4ada-a656-c5a4fc25cc3c) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+No environment variables are used. To update event content, edit the data arrays at the top of each component in `src/components/sections/`.
